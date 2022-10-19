@@ -1,0 +1,78 @@
+# def solution(keyinput,board):
+#     pos = [0,0]
+#     lr = {"left": -1, "right": 1}
+#     ud = {"down": -1, "up": 1}
+#     limit_x = board[0] // 2
+#     limit_y = board[1] // 2
+#     for k in keyinput:
+#         if k in lr:
+#             if abs(pos[0] + lr[k]) > limit_x:
+#                 continue
+#             pos[0] += lr[k]
+#         elif k in ud:
+#             if abs(pos[1] + ud[k]) > limit_y:
+#                 continue
+#             pos[1] += ud[k]
+#         print(k,pos)
+#     return pos
+#
+#
+# k = ["left", "right", "up", "right", "right"]
+# b = [11,11]
+# print(solution(k,b))
+
+
+#짝궁트브이숫자
+# def solution(X,Y):
+#     answer = ''
+#     Xnum = []
+#     Ynum = []
+#     for i in range(10):
+#         Xnum.append(X.count(str(i)))
+#         Ynum.append(Y.count(str(i)))
+#     mate = []
+#     for j in range(10):
+#         if Xnum[j] > 0 and Ynum[j] > 0:
+#             mate += [str(j)] * min(Xnum[j], Ynum[j])
+#     mate.sort(reverse=True)
+#     answer = ''.join(mate)
+#     if len(answer) == 0:
+#         return "-1"
+#     elif len(answer) == answer.count('0'):
+#         return '0'
+#     else:
+#         return answer
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# def solution(X, Y):
+#     answer = ''
+#     mate = []
+#     X_cnt = []
+#     Y_cnt = []
+#     for i in range(10):
+#         X_cnt.append(X.count(str(i)))
+#         Y_cnt.append(Y.count(str(i)))
+#     for j in range(10):
+#         if X_cnt[j] > 0 and Y_cnt[j] > 0:
+#             mate += [str(j)] * min(X_cnt[j], Y_cnt[j])
+#     mate.sort(reverse=True)
+#     mate = ''.join(mate)
+#     if len(mate) == 0:
+#         return '-1'
+#     elif mate.count('0') == len(mate):
+#         return '0'
+#     else:
+#         return mate
+#
+# X = "12321"
+# Y = "42531"
+# print(solution(X,Y))
